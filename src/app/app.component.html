@@ -1,4 +1,21 @@
-<mat-checkbox #showDiv [value]="value" [checked]="isChecked" (change)="onChange($event)"> Checkbox example
-</mat-checkbox>
+<div class="row">
+  <!-- checkbox example -->
+  <div class="col-lg-3">
+    <h3> Checkbox Example</h3>
+    <mat-checkbox #showDiv [value]="value" [checked]="isChecked" (change)="onChange($event)"> Show
+    </mat-checkbox>
+    <div *ngIf="showDiv.checked"> Show Details </div>
+  </div>
+  <div class="col-lg-3">
+    <!-- Radio button example -->
+    <h3> Radio Button Example</h3>
+    <mat-radio-group aria-label="Select an option">
+      <mat-radio-button value="1">Option 1</mat-radio-button> &nbsp;&nbsp;&nbsp;
+      <mat-radio-button value="2">Option 2</mat-radio-button>
+    </mat-radio-group>
+  </div>
+</div>
 
-<div *ngIf="showDiv.checked"> Show Details </div>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>

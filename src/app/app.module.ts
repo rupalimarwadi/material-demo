@@ -7,6 +7,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatRadioModule } from '@angular/material/radio';
+
 
 
 @NgModule({
@@ -18,6 +20,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     AppRoutingModule,
     NoopAnimationsModule,
     MatCheckboxModule,
+    MatRadioModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
