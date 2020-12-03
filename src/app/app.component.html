@@ -14,6 +14,26 @@
       <mat-radio-button value="2">Option 2</mat-radio-button>
     </mat-radio-group>
   </div>
+  <div class="col-lg-3">
+    <!-- Drop Down example -->
+    <h4>Basic mat-select</h4>
+    <mat-form-field appearance="fill">
+      <mat-label>Favorite fruit</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let food of foods" [value]="food.value">
+          {{food.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="col-lg-3">
+    <mat-form-field appearance="legacy">
+      <mat-label>User email</mat-label>
+      <input ngModel #useremail="ngModel" name="useremail" matInput placeholder="Placeholder" required>
+      <mat-icon matSuffix>@domain.com</mat-icon>
+      <mat-error *ngIf="useremail.invalid && useremail.errors"> user email is required</mat-error>
+    </mat-form-field>
+  </div>
 </div>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
