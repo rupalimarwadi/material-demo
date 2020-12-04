@@ -15,7 +15,8 @@ export class AppComponent {
     { value: 1, viewValue: 'Grapes' },
     { value: 1, viewValue: 'Litchy' },
     { value: 1, viewValue: 'Cherry' }
-  ]
+  ];
+ 
   onChange($event) {
     console.log($event);
   }
