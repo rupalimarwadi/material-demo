@@ -27,6 +27,8 @@
     </mat-form-field>
   </div>
   <div class="col-lg-3">
+    <!-- Input tag example -->
+    <h4>form Input </h4>
     <mat-form-field appearance="legacy">
       <mat-label>User email</mat-label>
       <input ngModel #useremail="ngModel" name="useremail" matInput placeholder="Placeholder" required>
@@ -35,7 +37,14 @@
     </mat-form-field>
   </div>
 </div>
-
+<div class="row">
+  <div class="col-lg-3">
+    <mat-form-field class="example-full-width">
+      <mat-label>Leave a comment</mat-label>
+      <textarea matInput cols=10 rows="5" placeholder="Ex. It makes me feel..."></textarea>
+    </mat-form-field>
+  </div>
+</div>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
