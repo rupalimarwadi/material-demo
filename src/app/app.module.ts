@@ -20,11 +20,15 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatDialogModule } from '@angular/material/dialog';
+import { CourseEditComponent } from './course-edit/course-edit.component';
+import { CourseService } from './course.service';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CourseEditComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +48,8 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatProgressSpinnerModule,
     BrowserAnimationsModule,
     MatTooltipModule,
-    MatTabsModule
+    MatTabsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

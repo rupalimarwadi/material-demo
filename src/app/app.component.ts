@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { Observable , timer } from 'rxjs';
+import { MatDialog } from '@angular/material/dialog';
+import { Observable, timer } from 'rxjs';
+import { CourseEditComponent } from './course-edit/course-edit.component';
 // import { timer } from 'rxjs/observable/timer'
 // import 'rxjs/add/observable/timer';
 // import { timer } from 'rxjs/operators';
@@ -15,7 +17,7 @@ export class AppComponent {
   value = 2;
   isChecked = true;
   isLoading = false;
-  timer; 
+  timer;
   progress = 0;
   foods = [
     { value: 1, viewValue: 'Apple' },
@@ -25,7 +27,7 @@ export class AppComponent {
     { value: 5, viewValue: 'Cherry' }
   ];
   chipsEg = [{ name: 'rat' }, { name: 'cat' }, { name: 'cow' }, { name: 'buffalo' }];
-  constructor() {
+  constructor(private dialog: MatDialog) {
     this.timer = setInterval(() => {
       this.progress++;
       if (this.progress == 100) {
@@ -50,5 +52,10 @@ export class AppComponent {
     this.chipsEg.filter(c => c != obj).forEach(c => c['selected'] = false);
     obj.selected = !obj.selected;
     console.log(obj);
+  }
+  openDialog() {
+    this.dialog.open(CourseEditComponent, {
+      data: { courseId: 1 }
+    }).afterClosed().subscribe(result => console.log(result));
   }
 }
