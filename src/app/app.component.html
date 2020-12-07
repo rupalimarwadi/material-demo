@@ -57,12 +57,12 @@
       <!-- <mat-datepicker #picker1 touchUi="true"></mat-datepicker> for better ui for small screens  -->
     </mat-form-field>
   </div>
-  <div class="col-lg-2">
+  <div class="col-lg-3">
     <!-- icon example -->
     <h4>Icon Example</h4>
     <i class="material-icons md-48">face</i>
   </div>
-  <div class="col-lg-4">
+  <div class="col-lg-3">
     <!-- button example -->
     <h4>Button Example</h4>
     <div class="example-button-row">
@@ -113,10 +113,41 @@
     <!-- <mat-progress-spinner mode='indeterminate'></mat-progress-spinner> -->
   </div>
   <div class="col-lg-3">
+    <!-- Tooltip example -->
+    <h4>Tooltip Example</h4>
     <button mat-raised-button matTooltip="Tooltip information"
       aria-label="Button that displays a tooltip that has custom delays through a default config">
-      Button 
+      Button
     </button>
+  </div>
+  <div class="col-lg-3">
+    <!-- Tabs example -->
+    <h4>Tabs Example</h4>
+    <mat-tab-group>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <mat-icon class="example-tab-icon">dashboard</mat-icon>
+          First
+        </ng-template>
+        Content 1
+      </mat-tab>
+
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <mat-icon class="example-tab-icon">home</mat-icon>
+          Second
+        </ng-template>
+        Content 2
+      </mat-tab>
+
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <mat-icon class="example-tab-icon">edit</mat-icon>
+          Third
+        </ng-template>
+        Content 3
+      </mat-tab>
+    </mat-tab-group>
   </div>
 </div>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
