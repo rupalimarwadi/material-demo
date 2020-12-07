@@ -50,12 +50,67 @@
     <!-- calender example -->
     <h4>Custom calender Example</h4>
     <mat-form-field color="accent" appearance="fill">
-      <mat-label>Inherited calendar color</mat-label>
+      <mat-label>calendar color</mat-label>
       <input matInput [matDatepicker]="picker1">
       <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
       <mat-datepicker #picker1></mat-datepicker>
-      <!-- <mat-datepicker #picker1 touchUi="true"></mat-datepicker> for better ui for small screens  --> 
+      <!-- <mat-datepicker #picker1 touchUi="true"></mat-datepicker> for better ui for small screens  -->
     </mat-form-field>
+  </div>
+  <div class="col-lg-2">
+    <!-- icon example -->
+    <h4>Icon Example</h4>
+    <i class="material-icons md-48">face</i>
+  </div>
+  <div class="col-lg-4">
+    <!-- button example -->
+    <h4>Button Example</h4>
+    <div class="example-button-row">
+      <button mat-button>Basic</button>
+      <button mat-button color="primary">Primary</button>
+      <button mat-button color="accent">Accent</button>
+      <button mat-button color="warn">Warn</button>
+      <button mat-button disabled>Disabled</button>
+      <a mat-button href="https://www.google.com/" target="_blank">Link</a>
+    </div>
+    <section>
+
+      <div class="example-button-row">
+        <div class="example-flex-container">
+          <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+            <mat-icon>home</mat-icon>
+          </button>
+          <button mat-icon-button color="accent" aria-label="Example icon button with a menu icon">
+            <mat-icon>menu</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+            <mat-icon>favorite</mat-icon>
+          </button>
+          <button mat-icon-button disabled aria-label="Example icon button with a open in new tab icon">
+            <mat-icon>open_in_new</mat-icon>
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-3">
+    <!-- Chips example -->
+    <h4>Chips Example</h4>
+    <mat-chip-list>
+      <mat-chip *ngFor="let c of chipsEg" (click)="onSelectChips(c)" [selected]="c.selected"> {{ c.name | uppercase }}
+      </mat-chip>
+    </mat-chip-list>
+  </div>
+  <div class="col-lg-3">
+    <!--  Progress spinner  example -->
+    <h4>Basic Progress spinner Example</h4>
+    <mat-spinner mode="determinate" [value]="progress"></mat-spinner>
+    <!-- <mat-progress-spinner mode='indeterminate'></mat-progress-spinner> -->
   </div>
 </div>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
